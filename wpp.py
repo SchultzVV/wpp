@@ -229,8 +229,8 @@ def get_sun_moon_wpp():
     url = urli+year+month+day+'T'+hour+minutes+'&earth=1'
     urllib.request.urlretrieve(url,'wallpaper.jpg')
     #return url
-#get_sun_moon_wpp()
-#s.exit()
+get_sun_moon_wpp()
+s.exit()
 #------------Image from Goes16, filters and real colors-------------------------
 #------------Letícia's set -----------------------------------------------------
 def Roulete():
@@ -276,20 +276,20 @@ def the_last_images(range,sources):
 '''     E POEM NESSA OUTRA LINHA AQUI, ESCOLHENDO A RESOLUÇÃO TAMBÉM
         como eu já fiz, é só descomentar o filtro que tu quer.
 '''
-#Instant_source('AirMass','1808x1808.jpg')
-#Instant_source('Sandwich','1808x1808.jpg')
-#Instant_source('DayCloudPhase','1808x1808.jpg')
-#Instant_source('02','1808x1808.jpg')# B W
-#Instant_source('04','1808x1808.jpg')# B W
-#Instant_source('06','1808x1808.jpg')# B W
-#Instant_source('07','1808x1808.jpg')
-#Instant_source('08','1808x1808.jpg')
-#Instant_source('09','1808x1808.jpg')
-#Instant_source('10','1808x1808.jpg')
+Instant_source('AirMass','1808x1808.jpg')
+Instant_source('Sandwich','1808x1808.jpg')
+Instant_source('DayCloudPhase','1808x1808.jpg')
+Instant_source('02','1808x1808.jpg')# B W
+Instant_source('04','1808x1808.jpg')# B W
+Instant_source('06','1808x1808.jpg')# B W
+Instant_source('07','1808x1808.jpg')
+Instant_source('08','1808x1808.jpg')
+Instant_source('09','1808x1808.jpg')
+Instant_source('10','1808x1808.jpg')
 #Instant_source('11','1808x1808.jpg')
 #Instant_source('12','1808x1808.jpg')
 #Instant_source('15','1808x1808.jpg')
-Instant_source('GEOCOLOR','1808x1808.jpg')
+#Instant_source('GEOCOLOR','1808x1808.jpg')
 #Instant_source('GEOCOLOR','10848x10848.jpg')
 
 #++++++++++++++++++if ou wanna change resolution uncoment+++++++++++++++++++++++
