@@ -2,6 +2,12 @@ import urllib.request;
 import datetime;
 import time
 import pickle;import sys as s;import urllib;
+import os 
+os.chdir(os.getcwd()+'/')
+
+# Find the current wallpaper image and put the path to this image here
+path_to_current_wpp = 'Pictures/Wallpapers/wallpaper.jpg'
+
 
 #-----------------------------Here The Tools------------------------------------
 def Style(which):
@@ -134,7 +140,7 @@ def Instant_band_roulete(sources,resolution):
         last_index = pickle.load( open( "L_I", "rb" ) )
     except:
         last_index = 0
-    if last_index==0:
+    if last_index == 0:
         index = 0
         source=sources[index]
         index+= 1
@@ -156,7 +162,7 @@ def Instant_band_roulete(sources,resolution):
     pickle.dump(index, address)
     address.close()
     try:
-        urllib.request.urlretrieve(url,'wallpaper.jpg')
+        urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
         pass
 #-------------------------------------------------------------------------------
@@ -174,7 +180,7 @@ def Instant_Geocolor(resolution):
     url=url_source_resolution(instant,'GEOCOLOR',resolution)
     #url=Resolution_change(url,resolution)
     try:
-        urllib.request.urlretrieve(url,'wallpaper.jpg')
+        urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
         pass
 #------------------------------------------------------------------------------
@@ -194,11 +200,11 @@ def Instant_source(source,resolution):
     url=url_source_resolution(instant,source,resolution)
     #url=Resolution_change(url,resolution)
     print(url)
-    urllib.request.urlretrieve(url,'wallpaper.jpg')
+    #urllib.request.urlretrieve(url, path_to_current_wpp)
     try:
-        urllib.request.urlretrieve(url,'wallpaper.jpg')
+        urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
-        print('nao tem data')
+        print('nao tem dados')
         pass
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
@@ -210,7 +216,7 @@ def Days_evolution_band_roulete(Year,Di,Df,Hi,Hf,Mi,Mf,source,resolution):
                 url=url_source_resolution(instant,source,resolution)
                 print(url)
                 try:
-                    urllib.request.urlretrieve(url,'wallpaper.jpg')
+                    urllib.request.urlretrieve(url, path_to_current_wpp)
                 except:
                     pass
 #-------------------------------------------------------------------------------
@@ -227,10 +233,10 @@ def get_sun_moon_wpp():
     hour = time[11:13]
     minutes = time[14:16]
     url = urli+year+month+day+'T'+hour+minutes+'&earth=1'
-    urllib.request.urlretrieve(url,'wallpaper.jpg')
+    urllib.request.urlretrieve(url, path_to_current_wpp)
     #return url
-get_sun_moon_wpp()
-s.exit()
+#get_sun_moon_wpp()
+#s.exit()
 #------------Image from Goes16, filters and real colors-------------------------
 #------------Letícia's set -----------------------------------------------------
 def Roulete():
@@ -242,9 +248,9 @@ def Roulete():
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+++++++++++++++++++++++AQQQQUIIII+++++++++++++++++++++++++++++++++++++++++
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-#Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
 #Instant_band_roulete(Style(1),'678x678.jpg')
-#s.exit()
+s.exit()
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  #-------------------------------------------------------------------------------
 def Filters_endsGeocolor(sources):
@@ -267,9 +273,9 @@ def the_last_images(range,sources):
     print(year,dayI,dayF,'ae')
     for i in sources:
         Days_evolution_band_roulete(year,dayI,dayF,1,23,30,40,i,'678x678.jpg')
-#range_of_days=1
-#the_last_images(range_of_days,Style(3))
-#s.exit()
+# range_of_days=2
+# the_last_images(range_of_days,Style(3))
+# s.exit()
 #-------------------------------------------------------------------------------
 '''     SE QUISER UM FILTRO ESPECÍFICO SÓ ESCOLHE ALGUM NESSA LINHA DE BAIXO'''
 #sources=['GEOCOLOR','AirMass','Sandwich','DayCloudPhase','02','04','06','07','08','09','10','11','12','15']
@@ -277,20 +283,21 @@ def the_last_images(range,sources):
         como eu já fiz, é só descomentar o filtro que tu quer.
 '''
 Instant_source('AirMass','1808x1808.jpg')
-Instant_source('Sandwich','1808x1808.jpg')
 Instant_source('DayCloudPhase','1808x1808.jpg')
-Instant_source('02','1808x1808.jpg')# B W
-Instant_source('04','1808x1808.jpg')# B W
-Instant_source('06','1808x1808.jpg')# B W
+Instant_source('Sandwich','1808x1808.jpg')
+# s.exit()
+#Instant_source('02','1808x1808.jpg')# B W
+#Instant_source('04','1808x1808.jpg')# B W
+#Instant_source('06','1808x1808.jpg')# B W
 Instant_source('07','1808x1808.jpg')
 Instant_source('08','1808x1808.jpg')
 Instant_source('09','1808x1808.jpg')
 Instant_source('10','1808x1808.jpg')
-#Instant_source('11','1808x1808.jpg')
-#Instant_source('12','1808x1808.jpg')
-#Instant_source('15','1808x1808.jpg')
+Instant_source('11','1808x1808.jpg')
+Instant_source('12','1808x1808.jpg')
+Instant_source('15','1808x1808.jpg')
 #Instant_source('GEOCOLOR','1808x1808.jpg')
-#Instant_source('GEOCOLOR','10848x10848.jpg')
+Instant_source('GEOCOLOR','10848x10848.jpg')
 
 #++++++++++++++++++if ou wanna change resolution uncoment+++++++++++++++++++++++
 
