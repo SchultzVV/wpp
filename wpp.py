@@ -51,6 +51,9 @@ def enjambre(url):
 #        print(b)
 #        print(a+b)
         return url_enjambrada
+    else:
+        return url
+       
 #	c = a+b
 #    url.split('/')[7] = c
         #c[8] = str(int(c[8])-1)
