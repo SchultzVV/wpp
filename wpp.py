@@ -24,6 +24,40 @@ def Style(which):
         sources=['AirMass','Sandwich','DayCloudPhase','02','04','06','07','08','09','10','11','12','15']
     return sources
 #-------------------------------------------------------------------------------
+def enjambre(url):
+    primeira = url.split('/')
+#    print(primeira)
+#    print(url.split('/')[7].split("_")[0])
+    elementos = primeira[7].split("_")
+    tempo = elementos[0]
+    if len(tempo) != 1:
+        a = tempo[:4]+'00'
+        b = tempo[6:]
+        b = str(int(b)-100)
+        c = a+b
+#        print(c.join())
+        print(url.split('/')[7].split("_")[1])
+        elementos[0] = c
+        elemento = '_'.join(elementos)
+        print(tempo)
+        print(elementos)
+        print(elemento)
+        fixed = primeira[-1] = elemento
+        print(primeira)
+        url_enjambrada = '/'.join(primeira)
+        print(url_enjambrada)
+#        url2 = a+b.join
+
+#        print(b)
+#        print(a+b)
+        return url_enjambrada
+#	c = a+b
+#    url.split('/')[7] = c
+        #c[8] = str(int(c[8])-1)
+#        print(len(c))
+#        print(c)
+#        return c
+#-------------------------------------------------------------------------------
 def fix(hour,minutes,TtoRemov):
     a=int(minutes)-TtoRemov
     hour,minutes=int(hour),int(minutes)
@@ -162,6 +196,7 @@ def Instant_band_roulete(sources,resolution):
     pickle.dump(index, address)
     address.close()
     try:
+        url = enjambre(url)
         urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
         pass
@@ -180,6 +215,7 @@ def Instant_Geocolor(resolution):
     url=url_source_resolution(instant,'GEOCOLOR',resolution)
     #url=Resolution_change(url,resolution)
     try:
+        url = enjambre(url)
         urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
         pass
@@ -200,8 +236,10 @@ def Instant_source(source,resolution):
     url=url_source_resolution(instant,source,resolution)
     #url=Resolution_change(url,resolution)
     print(url)
+    url = enjambre(url)
     #urllib.request.urlretrieve(url, path_to_current_wpp)
     try:
+        url = enjambre(url)
         urllib.request.urlretrieve(url, path_to_current_wpp)
     except:
         print('nao tem dados')
@@ -216,6 +254,7 @@ def Days_evolution_band_roulete(Year,Di,Df,Hi,Hf,Mi,Mf,source,resolution):
                 url=url_source_resolution(instant,source,resolution)
                 print(url)
                 try:
+                    url = enjambre(url)
                     urllib.request.urlretrieve(url, path_to_current_wpp)
                 except:
                     pass
@@ -233,6 +272,7 @@ def get_sun_moon_wpp():
     hour = time[11:13]
     minutes = time[14:16]
     url = urli+year+month+day+'T'+hour+minutes+'&earth=1'
+    url = enjambre(url)
     urllib.request.urlretrieve(url, path_to_current_wpp)
     #return url
 #get_sun_moon_wpp()
