@@ -25,6 +25,7 @@ def Style(which):
     return sources
 #-------------------------------------------------------------------------------
 def enjambre(url):
+    return url
     primeira = url.split('/')
 #    print(primeira)
 #    print(url.split('/')[7].split("_")[0])
@@ -53,7 +54,6 @@ def enjambre(url):
         return url_enjambrada
     else:
         return url
-       
 #	c = a+b
 #    url.split('/')[7] = c
         #c[8] = str(int(c[8])-1)
@@ -291,9 +291,9 @@ def Roulete():
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+++++++++++++++++++++++AQQQQUIIII+++++++++++++++++++++++++++++++++++++++++
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Instant_band_roulete(Style(1),'1808x1808.jpg')
+#Instant_band_roulete(Style(1),'1808x1808.jpg')
 #Instant_band_roulete(Style(1),'678x678.jpg')
-s.exit()
+#s.exit()
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  #-------------------------------------------------------------------------------
 def Filters_endsGeocolor(sources):
@@ -314,8 +314,10 @@ def the_last_images(range,sources):
     minutes = minutes[:-1]+'0'
     hour,minutes=fix(hour,minutes,30)
     print(year,dayI,dayF,'ae')
-    for i in sources:
-        Days_evolution_band_roulete(year,dayI,dayF,1,23,30,40,i,'678x678.jpg')
+    Days_evolution_band_roulete(year,dayI,dayF,1,23,30,45,'Sandwich','1808x1808.jpg')#'678x678.jpg')
+    
+#    for i in sources:
+#        Days_evolution_band_roulete(year,dayI,dayF,1,23,30,40,i,'678x678.jpg')
 # range_of_days=2
 # the_last_images(range_of_days,Style(3))
 # s.exit()
@@ -325,23 +327,29 @@ def the_last_images(range,sources):
 '''     E POEM NESSA OUTRA LINHA AQUI, ESCOLHENDO A RESOLUÇÃO TAMBÉM
         como eu já fiz, é só descomentar o filtro que tu quer.
 '''
-Instant_source('AirMass','1808x1808.jpg')
-Instant_source('DayCloudPhase','1808x1808.jpg')
-Instant_source('Sandwich','1808x1808.jpg')
+#Instant_source('AirMass','1808x1808.jpg')
+#Instant_source('DayCloudPhase','1808x1808.jpg')
+#Instant_source('Sandwich','1808x1808.jpg')
+#range_of_days = 2
+#the_last_images(range_of_days,Style(3))
 # s.exit()
 #Instant_source('02','1808x1808.jpg')# B W
 #Instant_source('04','1808x1808.jpg')# B W
 #Instant_source('06','1808x1808.jpg')# B W
-Instant_source('07','1808x1808.jpg')
-Instant_source('08','1808x1808.jpg')
-Instant_source('09','1808x1808.jpg')
-Instant_source('10','1808x1808.jpg')
-Instant_source('11','1808x1808.jpg')
-Instant_source('12','1808x1808.jpg')
-Instant_source('15','1808x1808.jpg')
-#Instant_source('GEOCOLOR','1808x1808.jpg')
-Instant_source('GEOCOLOR','10848x10848.jpg')
-
+#Instant_source('07','1808x1808.jpg')
+#Instant_source('08','1808x1808.jpg')
+#Instant_source('09','1808x1808.jpg')
+#Instant_source('10','1808x1808.jpg')
+#Instant_source('11','1808x1808.jpg')
+#Instant_source('12','1808x1808.jpg')
+#Instant_source('15','1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_band_roulete(Style(1),'1808x1808.jpg')
+Instant_source('GEOCOLOR','1808x1808.jpg')
+#Instant_source('GEOCOLOR','10848x10848.jpg')
 #++++++++++++++++++if ou wanna change resolution uncoment+++++++++++++++++++++++
 
     #   '339x339.jpg'          # essa imagem pesa 27kb
